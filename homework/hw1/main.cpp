@@ -167,6 +167,11 @@ void seperate_on_decimal_2 (int & left_side, int & right_side, double input) {
     // Convert the string into an int and assign that value to the variable representing the left side
     left_side = stoi(s);
 
+    if (input_str.find('.') == -1) {
+        right_side = 0;
+        return;
+    }
+
     // Take a slice of the string from the index of '.' to the end of the string, aka the size - 1 which is the last index of the character array
     s = input_str.substr(input_str.find('.') + 1, input_str.find('0'));
     // Convert the string into an int and assign that value to the variable representing the right side
@@ -186,7 +191,7 @@ void seperate_on_decimal_2 (int & left_side, int & right_side, double input) {
 */
 void print_result (string currency, double amount, int left_side, int right_side) {
     if (currency == "Euros" || currency == "Pesos")
-        cout << setw(13) << amount << ":" << setw(7) << currency << setw(10) << left_side << " US dollars and " << right_side << " cents\n";
+        cout << setw(13) << amount << setw(6) << currency << setw(1) << ":" << setw(10) << left_side << " US dollars and " << right_side << " cents\n";
     else 
         cout << setw(20) << " Total:" << setw(10) << left_side << " US dollars and " << right_side << " cents\n";
 }
@@ -199,7 +204,7 @@ void print_result (string currency, double amount, int left_side, int right_side
   param 3 ( double ): input
 */
 void seperate_on_decimal_1 (int & left_side, int & right_side, double input) {
-    left_side = static_cast<int>(input);
+    left_side = trunc(input); // was static_cast<int>(input); which works peftectly because of promotion however trunc is used to keep the expression consistent
     right_side = static_cast<int>(round((input - left_side) * 100.0));
     
     // Also works: 
