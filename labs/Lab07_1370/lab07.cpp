@@ -1,13 +1,13 @@
 /////////////////////////////////////////////////////////////////////
 //
-// Name: <Put your name here>
-// Due date:
-// Class: <Your class number and section number, like: CSCI 1370.02>
-// Semester: <This semester, like: Spring 2012>
-// CSCI 1370 Instructor: <Your lecture instructor's name>
+// Name: Asher Haun
+// Due date: 10.5.22
+// Class: CSCI 1370-03
+// Semester: Fall 2022
+// CSCI 1370 Instructor: Gustavo Dietrich
 //
 // Using your own words describe below what the program does 
-// Program Description: 
+// Program Description: Given inputs side and radius, calculates and prints the surface area of a cube and sphere respectively.
 //
 /////////////////////////////////////////////////////////////////////
 
@@ -15,7 +15,7 @@
 #include <iostream>				// to use cin and cout
 #include <typeinfo>				// to be able to use operator typeid
 #include <cmath>
-#include <stdlib.h>
+#include <cstdlib>
 
 // Ignore this; it's a little function used for making tests
 inline void _test(const char* expression, const char* file, int line) {
@@ -84,8 +84,6 @@ int main () {
 	return 0;
 }
 
-
-
 //************************  Function definition  *************************
 // Read the handout carefully for detailed description of the functions that you have to implement
 
@@ -97,12 +95,12 @@ double square (double n) {
 
 // Calculate the surface area of the cube using the formula 6 x side^2 (six times the square of the side of the cube)
 double cube_surf (double s) {
-	return round_off(6 * square(s), 2);
+	return round_off(6.0 * square(s), 2);
 }
 
 // Calculate the surface area of the sphere using the formula 4 x Pi x radius^2 (four times Pi times the square of the radius of the sphere)
 double sphere_surf (double r) {
-	return round_off(4 * PI * square(r), 2);
+	return round_off(4.0* PI * square(r), 2);
 }
 
 // Rounds the value received in the first parameter to the number of digits received in the second parameter

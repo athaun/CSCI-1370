@@ -1,0 +1,2 @@
+The area of the rectangle with base   1.00 and height   2.00 is   2.00
+The area of the ellipse with radius   1.00 and radius   2.00 is   6.30
