@@ -22,9 +22,9 @@ int main () {
     char letter;
 
     inFile.open("/Users/asher/Documents/code/CSCI-1370/lectures/week6/input_1.txt");
-    if (!inFile) return 1; 
+    if (!inFile) return 4; 
     outFile.open("/Users/asher/Documents/code/CSCI-1370/lectures/week6/output_1.txt");
-    if (!outFile) return 1; 
+    if (!outFile) return 4; 
 
     inFile >> name;
     inFile >> num >> num2 >> letter;
