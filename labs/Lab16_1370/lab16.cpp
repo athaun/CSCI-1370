@@ -6,8 +6,8 @@
 // Semester: Fall 2022
 // CSCI/CMPE 1370 Instructor: Gustavo Dietrich
 //
-// 
-// 
+// Loops through a file containing data about room occupancy and count in a hotel.
+// Displays the total number of rooms, the number of occupied rooms and the percentage of rooms that are occupied in a table.
 //
 /////////////////////////////////////////////////////////////////////
 
