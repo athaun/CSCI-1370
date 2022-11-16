@@ -65,6 +65,7 @@ void print_occupancy (std::ifstream & in_file) {
 			  << "----------------------------\n";
 	std::cout << std::fixed << std::setprecision(1);
 
+	in_file.peek(); // Peek at the next character in the file (needed if file is empty)
 	while (!in_file.eof()) {
 		int rm; // Current room
 		

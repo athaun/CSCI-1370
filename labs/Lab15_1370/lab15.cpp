@@ -22,7 +22,7 @@ void guess_number ();
 void pig_roll ();
 
 int main () {
-	// guess_number();
+	guess_number();
 
 	// Pause the execution of the program
 	std::cout << "Press Enter to continue ...";
@@ -55,8 +55,6 @@ int get_seed () {
 	do {
 		std::cout << "Enter a seed (0 or 1000..4000): ";
 		std::cin >> seed;
-		// print seed
-		std::cout << "Seed: " << seed << std::endl;
 	} while ((seed < 1000 || seed > 4000) && seed != 0);
 
 	// Return the seed
